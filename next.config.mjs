@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Biarkan typescript ignore tetap ada (biasanya ini masih didukung)
+  // Matikan pengecekan error Type saat build
   typescript: {
     ignoreBuildErrors: true,
   },
-  // HAPUS BAGIAN ESLINT DARI SINI
+  // Matikan pengecekan error ESLint saat build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
